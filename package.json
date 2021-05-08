@@ -1,0 +1,33 @@
+{
+  "name": "vue-wangeditor",
+  "version": "1.0.0",
+  "description": "Wangeditor based on vue3.x",
+  "main": "dist/index.js",
+  "module": "dist/index.esm.js",
+  "browser": "dist/index.umd.js",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "keywords": ["vue3.x", "wangeditor"],
+  "author": "cnax",
+  "license": "ISC",
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.0.11",
+    "vue": "^3.0.11",
+    "wangeditor": "^4.6.17",
+    "xss": "^1.0.9"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.14.0",
+    "@babel/plugin-transform-runtime": "^7.13.15",
+    "@babel/preset-env": "^7.14.1",
+    "@rollup/plugin-babel": "^5.3.0",
+    "@rollup/plugin-commonjs": "^19.0.0",
+    "@rollup/plugin-image": "^2.0.6",
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-latest": "^6.24.1",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-terser": "^7.0.2",
+    "rollup-plugin-vue": "^6.0.0"
+  }
+}

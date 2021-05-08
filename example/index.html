@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>vue-wangeditor</title>
+  <script src="https://unpkg.com/vue@3.0.11/dist/vue.global.js"></script>
+  <script src="../dist/index.umd.js"></script>
+</head>
+<body>
+  <div id="app"></div>
+  <script>
+    const { createApp, reactive } = Vue;
+    const comp = {
+      template: `
+        <wangeditor></wangeditor>
+      `
+    }
+    createApp(comp).use(vueWangeditor).mount('#app')
+  </script>
+</body>
+</html>
