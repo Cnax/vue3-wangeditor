@@ -1,11 +1,12 @@
-import resolve from "rollup-plugin-node-resolve"
+import resolve from '@rollup/plugin-node-resolve';
 import vue from "rollup-plugin-vue"
 import babel from "@rollup/plugin-babel"
 import commonjs from "@rollup/plugin-commonjs"
-import { terser } from "rollup-plugin-terser";
+import terser from '@rollup/plugin-terser';
 import image from "@rollup/plugin-image"
+import json from '@rollup/plugin-json';
 
-import pkg from './package.json'
+import pkg from './package.json' assert { type: "json" }
 
 const es = {
   input: 'src/components/index.js',
@@ -16,10 +17,12 @@ const es = {
     extend: true,
     globals: {
       vue: "Vue" // 告诉rollup全局变量Vue即是vue
-    }
+    },
+    plugins: [terser()]
   },
   external: ['vue'],
   plugins: [ // 引入的插件在这里配置
+    json(),
     resolve(),
     vue({
       css: true,
@@ -30,8 +33,7 @@ const es = {
       babelHelpers: 'bundled'
     }),
     commonjs(),
-    image(),
-    terser()
+    image()
   ]
 }
 
@@ -44,10 +46,12 @@ const minEs = {
     extend: true,
     globals: {
       vue: "Vue" // 告诉rollup全局变量Vue即是vue
-    }
+    },
+    plugins: [terser()]
   },
   external: ['vue'],
   plugins: [ // 引入的插件在这里配置
+    json(),
     resolve(),
     vue({
       css: true,
@@ -58,8 +62,7 @@ const minEs = {
       babelHelpers: 'bundled'
     }),
     commonjs(),
-    image(),
-    terser()
+    image()
   ]
 }
 
@@ -72,10 +75,12 @@ const cjs = {
     exports: 'auto',
     globals: {
       vue: "Vue" // 告诉rollup全局变量Vue即是vue
-    }
+    },
+    plugins: [terser()]
   },
   external: ['vue'],
   plugins: [ // 引入的插件在这里配置
+    json(),
     resolve(),
     vue({
       css: true,
@@ -86,8 +91,7 @@ const cjs = {
       babelHelpers: 'bundled'
     }),
     commonjs(),
-    image(),
-    terser()
+    image()
   ]
 }
 
