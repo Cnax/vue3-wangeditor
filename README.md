@@ -1,11 +1,11 @@
-# wangeditor-vue
+# vue3-wangeditor-easy
 
 ## 基于vue3.x和wangeditor二次封装
 
 ### 安装
 
 ``` bash
-  npm i wangeditor-vue -S
+  npm i vue3-wangeditor-easy -S
 ```
 
 ### 使用
@@ -13,7 +13,7 @@
 一、全局使用
 
 ```javascript
-import wangeditor from 'wangeditor-vue'
+import wangeditor from 'vue3-wangeditor-easy'
 Vue.use(wangeditor)
 ```
 
@@ -26,7 +26,7 @@ Vue.use(wangeditor)
 </template>
 
 <script>
-import wangeditor from 'wangeditor-vue'
+import wangeditor from 'vue3-wangeditor-easy'
 export default {
   components: { wangeditor },
   data () {
