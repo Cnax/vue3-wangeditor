@@ -1,6 +1,6 @@
 {
   "name": "vue-wangeditor",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "Wangeditor based on vue3.x",
   "type": "module",
   "main": "dist/index.js",
